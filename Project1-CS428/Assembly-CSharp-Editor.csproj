@@ -57,7 +57,6 @@
   <ItemGroup>
      <Compile Include="Assets\Common\Editor\ConfigurePlayerSettings.cs" />
      <Compile Include="Assets\Common\Editor\OptionsConfigEditor.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\UserDefinedTargets\Scripts\Editor\UDTEventHandlerEditor.cs" />
      <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget360\authoringinfo.xml" />
      <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
      <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
