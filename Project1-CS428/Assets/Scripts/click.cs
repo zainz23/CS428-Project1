@@ -10,6 +10,7 @@ public class click : MonoBehaviour, IVirtualButtonEventHandler
     public GameObject model;
     public GameObject vb;
     public AudioSource audio;
+    public bool toggle = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,19 @@ public class click : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        model.SetActive(true);  // Model appears
-        audio.Play();           // Play audio
+        if (!toggle )
+        {
+            model.SetActive(true);  // Model appears
+            audio.Play();           // Play audio
+            toggle = true;
+        }
+        else
+        {
+            model.SetActive(false);  // Model appears
+            audio.Stop();           // Play audio
+            toggle = false;
+        }
+
     }
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
