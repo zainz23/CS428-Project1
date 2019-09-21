@@ -16,15 +16,15 @@ public class click : MonoBehaviour, IVirtualButtonEventHandler
     {
         vb.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
         model.SetActive(false);
+        audio.Stop();           // Wait until ready to play
     }
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        model.SetActive(true);
-        audio.Play();
+        model.SetActive(true);  // Model appears
+        audio.Play();           // Play audio
     }
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        audio.Stop();
     }
 }
